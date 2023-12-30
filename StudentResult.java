@@ -7,28 +7,44 @@ public class StudentResult {
 
         // Take inputs for each subject
         System.out.print("Enter marks for Maths: ");
-        int Subject1 = scanner.nextInt();
+        int Maths = scanner.nextInt();
 
         System.out.print("Enter marks for English: ");
-        int Subject2 = scanner.nextInt();
+        int English = scanner.nextInt();
 
         System.out.print("Enter marks for Bio: ");
-        int Subject3 = scanner.nextInt();
+        int Bio = scanner.nextInt();
 
         System.out.print("Enter marks for Science: ");
-        int Subject4 = scanner.nextInt();
+        int Science = scanner.nextInt();
 
         System.out.print("Enter marks for Physics: ");
-        int Subject5 = scanner.nextInt();
+        int Physics = scanner.nextInt();
 
         // Close the scanner to avoid resource leak
         scanner.close();
 
         // Check if the student passed or failed
-        if (Subject1 >= 35 && Subject2 >= 35 && Subject3 >= 35 && Subject4 >= 35 && Subject5 >= 35) {
+        if (Maths >= 35 && Bio >= 35 && Physics >= 35 && Science >= 35 && English >= 35) {
             System.out.println(" Passed.");
         } else {
             System.out.println("Failed.");
+
+            if (Maths < 35) {
+                System.out.println("Student Failed in Maths With Exam Result Marks as" + Maths);
+            }
+            if (Science < 35) {
+                System.out.println("Student Failed in Science With Exam Result Marks as" + Science);
+            }
+            if (Bio < 35) {
+                System.out.println("Student Failed in Science With Exam Result Marks as" + Bio);
+            }
+            if (Physics < 35) {
+                System.out.println("Student Failed in Physics With Exam Result Marks as" + Physics);
+            }
+            if (English < 35) {
+                System.out.println("Student Failed in English With Exam Result Marks as" + English);
+            }
         }
     }
 }
